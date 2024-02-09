@@ -1,7 +1,7 @@
 make_dataset:
-  seed: 23
+  seed: 8
   output_path: './data/processed/'
-  size: 0.2
+  size: 0.8
   raw_data_path: './data/raw/stocks.csv'
 
 train_model:
