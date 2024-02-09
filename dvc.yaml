@@ -8,8 +8,7 @@ stages:
     - make_dataset.output_path
     - make_dataset.size
     - make_dataset.raw_data_path
-    outs:
-    - ./data/processed
+
 #   train_model:
 #     cmd: python ./src/models/train_model.py
 #     deps:
