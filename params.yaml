@@ -4,3 +4,21 @@ make_dataset:
   size: 0.2
   raw_data_path: './data/raw/stocks.csv'
 
+train_model:
+  model: RandomForestRegressor()
+  params_grid: {
+    'n_estimators': [1, 2, 3],
+    'max_depth': [None, 4, 5, 6],
+    'min_samples_split': [2, 5, 10],
+    'min_samples_leaf': [1, 2, 4],
+    'bootstrap': [True, False]}
+  scoring: 'neg_mean_squared_error'
+  cv: 5
+  n_jobs: -1
+  verbose: 2
+  x_train_path: './data/interim/x_train.csv'
+  y_train_path: './data/interim/y_train.csv'
+  x_test_path: './data/interim/x_test.csv'
+  y_test_path: './data/interim/y_test.csv'
+  target: 'UPL'
+  

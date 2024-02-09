@@ -1,15 +1,25 @@
 import yaml
+import random
 import sys
+from dvclive import Live
 import pathlib
 from sklearn.model_selection import train_test_split
 import pandas as pd 
+
 
 def load_data(path):
     df=pd.read_csv(path)
     return df
 
+def clean_data(df):
+    df=df.dropna()
+    df=df.iloc[:,1:]
+    return df
+
 def data_split(df,size,seed):
-    train,test=train_test_split(df,test_size=size,random_state=seed)
+    with Live(save_dvc_exp=True) as live:
+        train,test=train_test_split(df,test_size=size,random_state=seed)
+        live.log_param("train/test",1)
     return train,test
 
 def save_data(train,test,output_path):
@@ -29,6 +39,7 @@ def main():
 
 
     df=load_data(path)
+    df=clean_data(df)
     train,test=data_split(df,size,seed)
     save_data(train,test,output_path)
 

@@ -1,7 +1,7 @@
 stages:
   make_dataset:
     cmd: python ./src/data/make_dataset.py
-    deps: 
+    deps:
     - ./src/data/make_dataset.py
     params:
     - make_dataset.seed
@@ -10,3 +10,25 @@ stages:
     - make_dataset.raw_data_path
     outs:
     - ./data/processed/
+#   train_model:
+#     cmd: python ./src/models/train_model.py
+#     deps:
+#     - ./src/models/train_model.py
+#     - ./params.yaml
+#     - ./data/processed/
+#     params:
+#     - train_model.model
+#     - train_model.params_grid
+#     - train_model.scoring
+#     - train_model.cv
+#     - train_model.n_jobs
+#     - train_model.verbose
+#     - train_model.x_train_path
+#     - train_model.x_test_path
+#     - train_model.y_train_path
+#     - train_model.y_test_path
+#     outs:
+#     - ./data/interim/
+#     - ./models/
+# params:
+# - dvclive/params.yaml

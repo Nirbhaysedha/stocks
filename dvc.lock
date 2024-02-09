@@ -5,8 +5,8 @@ stages:
     deps:
     - path: ./src/data/make_dataset.py
       hash: md5
-      md5: 63153955ac5d26a39d57c2ba44f94d2a
-      size: 1040
+      md5: 7379bae1ff465ae6bf50ce4194066969
+      size: 1262
     params:
       params.yaml:
         make_dataset.output_path: ./data/processed/
@@ -16,6 +16,6 @@ stages:
     outs:
     - path: ./data/processed/
       hash: md5
-      md5: 62c53c8b48b4b2bad16e09b074e80f73.dir
-      size: 882185
+      md5: 269cd62741fdc68668e40a56c1f4384d.dir
+      size: 403320
       nfiles: 2
