@@ -18,4 +18,4 @@ jobs:
     
     - name: Run main file
       run: |
-        python ./src/data/make_dataset.py
+        python src/data/make_dataset.py
