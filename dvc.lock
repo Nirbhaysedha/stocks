@@ -1,0 +1,15 @@
+schema: '2.0'
+stages:
+  make_dataset:
+    cmd: python ./src/data/make_dataset.py
+    deps:
+    - path: ./src/data/make_dataset.py
+      hash: md5
+      md5: 68bb6fece0a4d4d5f3de078c3196f0e6
+      size: 979
+    params:
+      params.yaml:
+        make_dataset.output_path: ./data/processed/
+        make_dataset.raw_data_path: ./data/raw/stocks.csv
+        make_dataset.seed: 23
+        make_dataset.size: 0.2

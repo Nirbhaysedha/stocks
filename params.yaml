@@ -1,0 +1,6 @@
+make_dataset:
+  seed: 23
+  output_path: './data/processed/'
+  size: 0.2
+  raw_data_path: './data/raw/stocks.csv'
+

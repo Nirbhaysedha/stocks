@@ -1,0 +1,14 @@
+stages:
+  make_dataset:
+    cmd: python ./src/data/make_dataset.py
+    deps: 
+    - ./src/data/make_dataset.py
+    params:
+    - make_dataset.seed
+    - make_dataset.output_path
+    - make_dataset.size
+    - make_dataset.raw_data_path
+    outs:
+    - './data/processed/
+
+
