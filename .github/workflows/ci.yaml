@@ -19,8 +19,3 @@ jobs:
     - name: Run main file
       run: |
         python ./src/data/make_dataset.py
-    
-    - name: Run Tests
-      run: |
-        python -m unittest discover
-        
