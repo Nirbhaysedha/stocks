@@ -18,7 +18,7 @@ jobs:
     
     - name: Run main file
       run: |
-        dvc exp run
+        python ./src/data/make_dataset.py
     
     - name: Run Tests
       run: |
