@@ -5,11 +5,17 @@ stages:
     deps:
     - path: ./src/data/make_dataset.py
       hash: md5
-      md5: 68bb6fece0a4d4d5f3de078c3196f0e6
-      size: 979
+      md5: 63153955ac5d26a39d57c2ba44f94d2a
+      size: 1040
     params:
       params.yaml:
         make_dataset.output_path: ./data/processed/
         make_dataset.raw_data_path: ./data/raw/stocks.csv
         make_dataset.seed: 23
         make_dataset.size: 0.2
+    outs:
+    - path: ./data/processed/
+      hash: md5
+      md5: 62c53c8b48b4b2bad16e09b074e80f73.dir
+      size: 882185
+      nfiles: 2

@@ -9,6 +9,4 @@ stages:
     - make_dataset.size
     - make_dataset.raw_data_path
     outs:
-    - './data/processed/
-
-
+    - ./data/processed/

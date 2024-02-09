@@ -13,6 +13,7 @@ def data_split(df,size,seed):
     return train,test
 
 def save_data(train,test,output_path):
+    pathlib.Path(output_path).mkdir(parents=True, exist_ok=True)
     train.to_csv(output_path+'/train.csv',index=False)
     test.to_csv(output_path+'/test.csv',index=False)
 
@@ -26,7 +27,7 @@ def main():
     seed=yaml_file['seed']
     output_path=yaml_file['output_path']
 
-    
+
     df=load_data(path)
     train,test=data_split(df,size,seed)
     save_data(train,test,output_path)
